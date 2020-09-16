@@ -1,0 +1,8 @@
+[submodule "local/components/odva/elements"]
+	path = local/components/odva/elements
+	url = https://github.com/z-z/components/
+	branch = elements
+[submodule "local/components/odva/element"]
+	path = local/components/odva/element
+	url = https://github.com/z-z/components/
+	branch = element
