@@ -16,6 +16,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ${{ secrets.SITE_DIR }} || { echo "SITE_DIR is not exists"; exit 1; }
+            if cd ${{ secrets.SITE_DIR }}; then
+              echo "SITE_DIR is not exists"
+              exit 1
+            fi
             pwd
             ls -la
