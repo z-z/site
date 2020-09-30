@@ -15,7 +15,8 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          script_stop: true
           script: |
-            cd ${{ secrets.SITE_DIR }} || { ::error "SITE_DIR is not exists"; exit 1; }
+            cd ${{ secrets.SITE_DIR }}
             pwd
             ls -la
