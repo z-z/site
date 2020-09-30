@@ -15,4 +15,4 @@ jobs:
           host: '78.155.199.43'
           username: 'root'
           key: ${{ secrets.SSH_KEY }}
-          script: whoami
+          script: ls -la /var/lamp/www/
