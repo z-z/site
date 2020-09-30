@@ -12,7 +12,7 @@ jobs:
       - name: 'Start linting'
         run: |
           npm install
-          npx eslint . || echo "::error file=app.js,line=10,col=15::Something went wrong"
+          npx eslint . || { echo "::error file=app.js,line=10,col=15::Something went wrong"; exit 1; }
 
   deploy:
     needs: lint
