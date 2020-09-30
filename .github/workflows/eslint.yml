@@ -17,4 +17,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ${{ secrets.SITE_DIR }}
+            pwd
             ls -la
