@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: 'Start linting'
-        run: |
-          npm install
-          npx eslint . || { echo "::error file=app.js,line=10,col=15::Something went wrong"; exit 1; }
+      - uses: actions/setup-node@v1
+      - name: npm install
+        run: npm i --ignore-scripts
+      - name: Run ESLint
+        run: npx eslint .
 
   deploy:
     needs: lint
